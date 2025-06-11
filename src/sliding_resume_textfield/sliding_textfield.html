@@ -1,0 +1,55 @@
+<div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="card d-flex align-items-center justify-content-center">
+                <div class="card-body">
+                    <resume_presentation_card 
+                        [body_title_text]="header_presentation_text"
+                        [body_name_text]="personalInformation.nom"
+                        [body_birthdate_text]="personalInformation.date_naissance"
+                        [body_living_text]="personalInformation.ville"
+                        [body_hobbies_text]="personalInformation.hobbies"
+                    ></resume_presentation_card>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <div class="card d-flex align-items-center justify-content-center">
+                <div class="card-header">
+                    {{header_scholar_text}}
+                </div>
+                <div class="card-body" *ngFor="let scholarInfo of scholarParcours">
+                    <resume_card_body 
+                        [body_title_text]="scholarInfo.nom_ecole"
+                        [body_main_text]="scholarInfo.nom_formation"
+                        [body_footer_text]="scholarInfo.plage_annee_cursus"
+                    ></resume_card_body>
+                </div>
+            </div>
+        </div>
+        
+        <div class="carousel-item">
+            <div class="card d-flex align-items-center justify-content-center">
+                <div class="card-header">
+                    {{header_pro_text}}
+                </div>
+                <div class="card-body" *ngFor="let proXp of professionalXp">
+                    <resume_card_body 
+                        [body_title_text]="proXp.entreprise"
+                        [body_main_text]="proXp.poste"
+                        [body_footer_text]="proXp.plage_annee_travaillee"
+                    ></resume_card_body>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev bg-primary" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="false"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next bg-primary" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon " aria-hidden="false"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>

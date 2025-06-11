@@ -1,0 +1,32 @@
+{
+    "information_personelle": {
+        "nom": "SENKAYA Mikrail",
+        "date_naissance": "30/10/1998",
+        "ville" : "Dijon",
+        "hobbies" : "Jeux Vidéos, Maquette, Manga"
+    },
+    "parcours_scolaire": [
+        {
+            "nom_ecole": "ESIREM",
+            "nom_formation": "ILC",
+            "plage_annee_cursus": "2019-2022"
+        },
+        {
+            "nom_ecole": "DUT",
+            "nom_formation": "GEII",
+            "plage_annee_cursus": "2018-2019"
+        }
+    ],
+    "experience_pro" : [
+        {
+            "poste": "Ingénieur en développement",
+            "entreprise": "Alteca",
+            "plage_annee_travaillee": "2022-2025"
+        },
+        {
+            "poste": "Stagiaire",
+            "entreprise": "Alteca",
+            "plage_annee_travaillee": "2022"
+        }
+    ]
+}
