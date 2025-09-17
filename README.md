@@ -1,59 +1,101 @@
-# TdPortfolio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.0.
+# Mini TD Angular
 
-## Development server
+## Présentation
 
-To start a local development server, run:
+Ce projet est une application Angular développée dans le cadre d'un TD. Elle propose une structure modulaire avec plusieurs composants (header, homepage, showroom, résumé, etc.) et une gestion des styles via SCSS. L'application est conçue pour être facilement extensible et maintenable.
 
-```bash
-ng serve
+## Structure du projet
+
+```
+mini_td_angular/
+├── angular.json
+├── package.json
+├── README.md
+├── tsconfig*.json
+├── public/
+│   ├── favicon.ico
+│   └── images/
+│       ├── 1.jpg
+│       ├── 2.jpg
+│       └── 3.jpg
+├── src/
+│   ├── index.html
+│   ├── main.ts
+│   ├── main.server.ts
+│   ├── server.ts
+│   ├── styles.scss
+│   └── app/
+│       ├── app.config.server.ts
+│       ├── app.config.ts
+│       ├── app.html
+│       ├── app.routes.server.ts
+│       ├── app.routes.ts
+│       ├── app.scss
+│       ├── app.spec.ts
+│       ├── app.ts
+│       ├── header/
+│       ├── homepage/
+│       ├── resume/
+│       ├── resume_card_body/
+│       ├── resume_presentation_card/
+│       ├── showroom/
+│       └── sliding_resume_textfield/
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Installation
 
-## Code scaffolding
+1. **Cloner le dépôt**
+	```bash
+	git clone <url-du-repo>
+	cd mini_td_angular
+	```
+2. **Installer les dépendances**
+	```bash
+	npm install
+	```
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+## Lancement de l'application
 
 ```bash
-ng build
+npm start
 ```
+L’application sera accessible sur `http://localhost:4200` par défaut.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Scripts utiles
 
-## Running unit tests
+- `npm start` : Démarre le serveur de développement
+- `npm test` : Lance les tests unitaires
+- `npm run build` : Compile l’application pour la production
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## Composants principaux
 
-```bash
-ng test
-```
+- **Header** : Barre de navigation principale (`src/app/header/`)
+- **Homepage** : Page d’accueil (`src/app/homepage/`)
+- **Showroom** : Présentation de projets ou réalisations (`src/app/showroom/`)
+- **Resume** : Section CV, avec sous-composants pour la présentation et le détail (`src/app/resume/`, `resume_card_body/`, `resume_presentation_card/`)
+- **Sliding Resume Textfield** : Champ de texte animé pour le CV (`src/app/sliding_resume_textfield/`)
 
-## Running end-to-end tests
+## Dépendances principales
 
-For end-to-end (e2e) testing, run:
+- [Angular](https://angular.io/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [SCSS](https://sass-lang.com/)
 
-```bash
-ng e2e
-```
+## Arborescence des composants
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Chaque composant possède :
+- Un fichier HTML pour la vue
+- Un fichier SCSS pour le style
+- Un fichier TypeScript pour la logique
 
-## Additional Resources
+## Contribution
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Les contributions sont les bienvenues !
+
+1. Forkez le projet
+2. Créez une branche (`git checkout -b feature/ma-nouvelle-fonctionnalite`)
+3. Commitez vos modifications (`git commit -am 'Ajout d'une fonctionnalité'`)
+4. Poussez la branche (`git push origin feature/ma-nouvelle-fonctionnalite`)
+5. Ouvrez une Pull Request
+
